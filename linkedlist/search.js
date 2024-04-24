@@ -102,6 +102,7 @@ class Node {
 
     search (value) {
         if (this.isEmpty()) {
+            console.log('list is empty');
             return -1
         }
         let i=0
@@ -113,6 +114,7 @@ class Node {
             curr = curr.next
             i++
         }
+        console.log('enterd value not include in the list');
         return -1
     }
   
@@ -156,4 +158,6 @@ class Node {
   linkedlist.append(40)
   linkedlist.print()
   console.log(linkedlist.search(40));
+  console.log(linkedlist.search(220));
+
   
