@@ -77,6 +77,7 @@ class LinkedList {
 
   removingValue(value) {
     if (this.isEmpty()){
+        console.log('the list is empty ,so u cant remove');
         return null
     } 
     if (this.head.value===value) {
@@ -94,6 +95,7 @@ class LinkedList {
             this.size--
             return value
         }
+        console.log('you entered value is not include in the list');
         return null
     }
   }
