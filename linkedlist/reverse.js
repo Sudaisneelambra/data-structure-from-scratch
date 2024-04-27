@@ -163,11 +163,12 @@ class Node {
       this.size++;
     }
   }
-  
+
   const linkedlist = new LinkedList();
   
 //   console.log(linkedlist.search(40));
 //   linkedlist.print();
+
   linkedlist.prepend(30);
   linkedlist.prepend(20);
   linkedlist.append(40)
