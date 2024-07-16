@@ -61,7 +61,27 @@ class BinarySearchTree{
             this.preOrder(root.right)
         }
     }
+
+    levelOrder(){
+        const queue=[]
+        queue.push(this.root)  //[10],
+ 
+        while(queue.length){
+            let curr = queue.shift()  //10 [], 5 [47], 47 [1,7], 1 [7,27,49], 7 [27,49], 27 [49] , 49 []
+            console.log(curr.value);  //10, 5, 47, 1,7,27,49
+            if(curr.left){
+                queue.push(curr.left) //[5], [47,1] ,[1,7,27],
+            }
+            if(curr.right){
+                queue.push(curr.right) //[5,47], [47,1,7] ,[1,7,27,49]
+            }
+        }
+    }
 }
+
+                    //   10
+                //  5        47
+            //    1    7   27   49
 
 const bst= new BinarySearchTree()
 
@@ -84,4 +104,6 @@ console.log(bst.search(bst.root,17));
 console.log(bst.search(bst.root,1));
 
 bst.preOrder(bst.root)
+console.log('-----------');
+bst.levelOrder()
 
